@@ -1,0 +1,60 @@
+{
+  "id": "QpCVBhc-WrUVwgIopmssgEBFlJr9xiO2SQjjXK5WBnY",
+  "rawId": "QpCVBhc-WrUVwgIopmssgEBFlJr9xiO2SQjjXK5WBnY",
+  "response": {
+      "attestationObject": "o2NmbXRkbm9uZWdhdHRTdG10oGhhdXRoRGF0YVikSZYN5YgOjGh0NBcPZHZgW4_krrmihjLHmVzzuoMdl2NFAAAAAK3OAAI1vMYKZIsLJfHwVQMAIEKQlQYXPlq1FcICKKZrLIBARZSa_cYjtkkI41yuVgZ2pQECAyYgASFYIJk_6PVdhdHHJSkH5oj9tyNGlHYNhfRc8JKUr3D0XAhXIlggvDX6sv_wzNXeTwOsmBAEmHsD8A9q6-B9BIAHQWhQM2M",
+      "clientDataJSON": "eyJ0eXBlIjoid2ViYXV0aG4uY3JlYXRlIiwiY2hhbGxlbmdlIjoiOGZmNzIxNmMtMzUxNi00NzMyLWE5MDItYzRmZjYyZDg5ZjcwIiwib3JpZ2luIjoiaHR0cDovL2xvY2FsaG9zdDo1MTczIiwiY3Jvc3NPcmlnaW4iOmZhbHNlfQ",
+      "transports": [
+          "internal"
+      ]
+  },
+  "type": "public-key",
+  "clientExtensionResults": {},
+  "authenticatorAttachment": "platform"
+}
+
+{
+  "_a": [
+      { 
+          "type": "public-key",
+          "id": "4S4NVGZ8KizMM2DJL7OpBdfqE-_kwuet5WJSZnsTpNY"
+      }
+  ],
+  "_b": [
+      {
+          "type": "public-key",
+          "id": "4S4NVGZ8KizMM2DJL7OpBdfqE-_kwuet5WJSZnsTpNY"
+      }
+  ],
+  "allowCredentials": [
+      {
+          "type": "public-key",
+          "id": {}
+      }
+  ],
+  "publicKey": {
+      "rpId": "localhost",
+      "challenge": {},
+      "allowCredentials": [
+          {
+              "type": "public-key",
+              "id": {}
+          }
+      ],
+      "timeout": 60000
+  },
+  "options": {
+      "publicKey": {
+          "rpId": "localhost",
+          "challenge": {},
+          "allowCredentials": [
+              {
+                  "type": "public-key",
+                  "id": {}
+              }
+          ],
+          "timeout": 60000
+      },
+      "signal": {}
+  }
+}
