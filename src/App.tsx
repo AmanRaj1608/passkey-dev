@@ -37,6 +37,7 @@ export enum COSEKEYS {
 const App: React.FC = () => {
   const [credentials, setCredentials] = useState<any>(null);
   const [publicKeys, setPublicKeys] = useState([] as any[]);
+  const [signature, setSignature] = useState("");
 
   const createPassKey = async () => {
     const supportsWebAuthn = browserSupportsWebAuthn();
@@ -211,6 +212,7 @@ Platform Authenticator available: ${platformAuthenticatorAvailable}`
     const userOpHash = await entryPoint.getUserOpHash(userOp);
     const signature = await signUserOperationHash(userOpHash);
     console.log({ userOpHash, signature });
+    setSignature(signature);
     return signature;
   };
 
@@ -269,6 +271,36 @@ Platform Authenticator available: ${platformAuthenticatorAvailable}`
           <button onClick={createPassKey}>Create Passkey</button>
           <button onClick={signUserOperation}>Verify Passkey</button>
         </div>
+
+        {publicKeys.length > 0 && (
+          <>
+            <h4>Public key generated</h4>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: 15,
+                margin: "0 auto",
+              }}
+            >
+              <li>{publicKeys[0]}</li>
+              <li>{publicKeys[1]}</li>
+            </div>
+          </>
+        )}
+
+        {signature && (
+          <p
+            style={{
+              margin: "0 auto",
+              marginTop: 30,
+              maxWidth: 600,
+              wordBreak: "break-all",
+            }}
+          >
+            UserOpSignature: <span style={{ color: "green" }}>{signature}</span>
+          </p>
+        )}
       </main>
     </div>
   );
