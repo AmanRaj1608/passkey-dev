@@ -132,6 +132,7 @@ Platform Authenticator available: ${platformAuthenticatorAvailable}`
     const challenge = utils
       .toBase64url(ethers.utils.arrayify(userOpHash))
       .replace(/=/g, "");
+    console.log(challenge);
     const authData = await startAuthentication({
       rpId: window.location.hostname,
       challenge: challenge,
@@ -198,8 +199,7 @@ Platform Authenticator available: ${platformAuthenticatorAvailable}`
       callGasLimit: 39580,
       verificationGasLimit: 150000,
       preVerificationGas: 21000,
-      signature:
-        "0x47c166ca1098d73e502281d09a65732a77a4f88af02d07564b59f30261a48bfd607c7d92d1d434f325a72e5523655c18cfa804ab54a6ac68f6ed161ba41cbe9d1b",
+      signature: "0x",
     };
     const provider = new ethers.providers.JsonRpcProvider(
       "https://mainnet.infura.io/v3/8af40d61a66047ca8294a0bb43b958fa"
