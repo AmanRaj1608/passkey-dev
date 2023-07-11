@@ -258,7 +258,7 @@ Platform Authenticator available: ${platformAuthenticatorAvailable}`
   return (
     <div>
       <main>
-        <h2>Biconomy Passkeys 256k1 signature test</h2>
+        <h2>Biconomy Passkeys 256r1 signature test</h2>
         <div
           style={{
             display: "flex",
